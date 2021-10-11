@@ -8,25 +8,26 @@
 
 :root {
     scroll-behavior: smooth;
-    --color-clear: #ffffff;
+    --white: #ffffff;
     --color-dark: #000000d5;
     --black: #000000;
-    --bg-header: #1a1a1afa;
-    --text-header: #ebebeb;
+    --bg-header: #202020fb;
+    --text-header: #ffffff;
+    --text-gray: #ffffffc0;
+    --color-red: #ab4649;
 }
 
 body {
-    background-image: url('https://www.pentasia.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaXhwIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9b531a296e23edbb0ae0d85e4160a44a71b44f8e/1662_original.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
-    background-color: var(--black);
+    background-color: #142325;
 }
 
-.head {
+.header {
     width: 100%;
-    height: 80px;
-    background-color: var(--bg-header);
+    height: 90px;
+    background-color: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +41,7 @@ body {
     line-height: 1.5;
 }
 
-.home-page {
+.my-profile {
     position: relative;
     display: flex;
     text-align: justify;
@@ -50,20 +51,33 @@ body {
     margin: 0 auto 0 auto;
 }
 
-.about-me h1 {
-    color: var(--color-clear);
+.my-name {
+    background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.658));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
     font-family: sans-serif;
-    font-weight: 900;
-    font-size: 50px;
+    font-weight: 700;
+    font-size: 58px;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 10px;
+}
+
+.about_h1 {
+    color: var(--white);
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
     margin-bottom: 30px;
 }
 
 .about-me p {
     display: flex;
-    color: var(--color-clear);
+    color: var(--white);
     font-family: sans-serif;
     font-size: 20px;
     width: 450px;
@@ -72,23 +86,26 @@ body {
     margin-top: 40px;
 }
 
-.about-me {
+.about-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--black);
-    height: 100%;
+    align-items: center;
+    background-color: #1f2129;
+    height: 1000px;
 }
 
-@media (max-width: 1200px) {
-    .about-me {
-        margin: 0 auto;
-        width: 100%;
-    }
+.container-informations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    gap: 50px;
 }
+
 
 .btn1 {
-    background: var(--color-clear);
+    background: var(--white);
     width: 280px;
     height: 35px;
     color: var(--black);
@@ -104,24 +121,24 @@ body {
     background-color: var(--black);
     transition: 0.2s;
     cursor: pointer;
-    color: var(--color-clear);
+    color: var(--white);
 }
 
 .btn1:active {
     background-color: #2c2c2c;
-    color: var(--color-clear);
+    color: var(--white);
     transition: 0.2s;
 }
 
 .wellcome {
-    color: var(--color-clear);
+    color: var(--white);
     font-size: 4.5rem;
     font-family: sans-serif;
     margin-top: 240px;
     font-weight: 500;
 }
 
-.name-title {
+h2.name-title{
     margin-left: 40px;
     cursor: pointer;
 }
@@ -134,28 +151,47 @@ body {
     border-radius: 4px;
 }
 
-.head-scroll {
+.header-scroll {
     position: fixed;
     height: 70px;
     box-shadow: 0px 0.2px 5px var(--black);
     width: 100%;
 }
 
-.btn {
+.btn-header {
     text-decoration: none;
     margin: 0px 16px;
     text-shadow: 0.2px 0.2px 0.2px;
     cursor: pointer;
     color: var(--text-header);
-    font-family: sans-serif;
-    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
 }
 
-.buttons {
+.btn-contact {
+    text-decoration: 0;
+    color: aqua;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid aqua;
+    border-radius: 4px;
+    font-weight: 200;
+}
+
+#nav {
     margin-right: 30px;
 }
 
-.logo {
+#menu {
+    display: flex;
+    list-style: none;
+}
+
+#btn-menu {
+    display: none;
+}
+
+.container-title {
     align-items: center;
     flex-direction: column;
     display: flex;
@@ -163,25 +199,32 @@ body {
     color: var(--text-header);
 }
 
-.about-me .img-ti {
+.about-me .img-avatar {
     height: 100%;
+    border: 4px solid #282b35;
+    box-shadow: 0.6px 0.6px 6px 0.6px rgba(0, 0, 0, 0.5);
 }
 
-.about-me .div-img {
-    margin-top: 50px;
-    height: 240px;
+.about-me .container-avatar {
+    height: 340px;
 }
 
-.front {
-    height: 600px;
+.home-page {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 25%, rgb(0,0,0,0.7) 50%, rgb(0,0,0,0.8) 75%, rgb(0,0,0,0.9) 100% ), url("/images/ceu-estrelado-bottom.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .div-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
-    margin: 20px auto;
-    gap: 50px;
+    justify-items: center;
+    align-items: center;
+    margin: 100px;
 }
 
 .comments {
@@ -270,13 +313,8 @@ body {
     align-items: center;
 }
 
-.btn:hover {
-    font-size: 15.4px;
-    transition: 0.2s;
-}
-
 .parent-container {
-    background-color: var(--black);
+    background-color: var(--white);
     align-items: center;
     margin: 0 auto;
     justify-content: center;
@@ -284,18 +322,339 @@ body {
 }
 
 .profile {
-    height: 300px;
-    width: 300px;
-    background-color: #686868;
+    height: 200px;
+    width: 200px;
+    background-color: #1c1f27;
     border-radius: 50%;
     display: flex;
     margin: 0 auto;
-    position: relative;
-    bottom: 100px;
-    border: 2px solid white;
 }
 
 .img-profile {
     width: 100%;
     border-radius: 50%;
+}
+
+.container-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profession {
+    background: linear-gradient(#ff8a8a, #ff999986);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.informations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+    width: 600px;
+    border: 2px solid var(--color-red);
+    border-radius: 4px;
+    margin: 18px 0;
+}
+.summary_about_me p {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+.summary_about_me h1 {
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0;
+}
+
+.summary_about_me .hr {
+    background-color: var(--color-red);
+    width: 80px;
+    height: 2px;
+    margin: 10px 0;
+    border: none;
+}
+
+
+.informations_standard {
+    display: flex;
+    flex-direction: column;
+}
+
+.informations_standard span, a {
+    color: var(--text-gray);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 32px;
+    margin: 0 8px;
+}
+
+.img-programming {
+    height: 500px;
+    width: 500px;
+    position: relative;
+    top: 100px;
+    right: 120px;
+}
+
+
+.img-programming img{
+    height: 100%;
+}
+
+.about-programming {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.about-programming p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    font-weight: 200;
+    color: var(--text-gray);
+}
+
+.skills-container {
+    height: 180vh;
+    width: 100%;
+    background-color: #343849;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.soft-skills {
+    margin-top: 150px;
+}
+
+
+.skills-container span {
+    color: gold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.skills-container .hr_2 {
+    background-color: gold;
+    border: none;
+    width: 80px;
+    height: 2px;
+    margin: 8px 0;
+}
+
+.my_skill {
+    height: 200px;
+    width: 200px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.my_skill img{
+    height: 80%;
+}
+
+.div-skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.container_my_skills {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.technologies-name {
+    color: var(--white);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 10px;
+    white-space: nowrap;
+}
+
+.contact-container {
+    height: 300px;
+    width: 100%;
+    background: #1c1f27;
+}
+
+.container-carousel {
+    margin: 0 auto;
+}
+
+.carousel-section hr{
+  border: 0;
+  background-color: gold;
+  height: 2px;
+  width: 160px;
+  margin: 10px 0;
+}
+
+.carousel-section span{
+    color: gold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}  
+
+.my_soft_skills {
+    border-radius: 100%;
+    margin: 36px;
+}
+
+.carousel-section {
+    background-color: #313541;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120vh;
+    padding: 20px;
+}
+
+.slide {
+    height: 540px;
+    width: 1000px;
+    border-radius: 6px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: #00000085 2px 2px 8px 2px;
+}
+
+.img_slide {
+    object-fit: cover;
+}
+
+.container-img-slide {
+    display: flex;
+    transition: transform 2s ease-in-out;
+    transform: translateX(0);
+}
+
+input[type="radio"] {
+    margin: 0 5px;
+    z-index: 1;
+}
+
+
+@media (max-width: 1200px) {
+    :root {
+        --bg-header2: #202020fb;
+    }
+
+    #btn-menu {
+        display: block;
+        padding: 10px;
+        width: 100px;
+        border: 1px solid aqua;
+        border-radius: 4px;
+        outline: none;
+        background-color: #00000000;
+        color: aqua;
+        font-size: 18px;
+        font-weight: 100;
+        cursor: pointer;
+    }
+
+    #menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--bg-header);
+    }
+
+    #menu li {
+        margin-left: 24px;
+        padding: 20px;
+    }
+
+    #menu li:hover {
+        margin-left: 32px;
+        transition: 0.5s;
+    }
+
+    #nav.active #menu {
+        display: block;
+    }
+
+    .btn-contact {
+        border: 0;
+        text-decoration: none;
+        text-shadow: 0.2px 0.2px 0.2px;
+        cursor: pointer;
+        color: var(--text-header);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+    }
+
+    .header {
+        background-color: var(--bg-header);
+        height: 70px;
+
+    }
+
+    .informations {
+       display: flex;
+    }
+
+    .about-me {
+        height: 1050px;
+    }
+
+    .img-programming {
+        display: none;
+    }
+
+    .div-skill {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        margin: 20px auto;
+    }
+
+    .container_my_skills {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .slide {
+        width: 100%;
+    }
+
+    .my-profile {
+        top: 50px;
+    }
+
+    .container-informations {
+        flex-direction: column;
+    }
+
+    .about-container {
+        min-height: 190vh;
+    }
+
+    .carousel-section {
+        display: none;
+    }
 }

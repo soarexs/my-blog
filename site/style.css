@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-/* https://cdn.pixabay.com/photo/2017/05/18/17/16/social-networks-2324180_960_720.png */
-
 :root {
     scroll-behavior: smooth;
     --white: #ffffff;
@@ -138,9 +136,26 @@ body {
     font-weight: 500;
 }
 
-h2.name-title{
+h2.name-title {
     margin-left: 40px;
     cursor: pointer;
+}
+
+.container-my-name {
+    margin: 0 0 100px 200px;
+    position: absolute;
+}
+
+.myName {
+    color: white;
+    font-family: sans-serif;
+    font-size: 36px;
+}
+
+.surname {
+    margin: 5px 60px;
+    position: absolute;
+    font-size: 36px
 }
 
 .total {
@@ -350,6 +365,29 @@ h2.name-title{
     font-family: sans-serif;
     font-size: 28px;
     font-weight: 600;
+    border-right: 1px solid white;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: white;
+    }to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes typing{
+    from {
+        width: 0;
+    }to {
+        width: 10em;
+    }
+}
+
+.profession {
+    animation: blinkCursor 500ms steps(40) infinite normal, typing 4s steps(40) 1s normal both;
 }
 
 .informations {
@@ -495,6 +533,9 @@ h2.name-title{
     height: 300px;
     width: 100%;
     background: #1c1f27;
+    display: flex;
+    align-items: center
+    ;
 }
 
 .container-carousel {
@@ -549,10 +590,42 @@ h2.name-title{
     transform: translateX(0);
 }
 
-input[type="radio"] {
-    margin: 0 5px;
-    z-index: 1;
+.icons-baseboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
+
+.icons-baseboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons-baseboard span {
+    color: white;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin: 20px 0 0 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.icons-baseboard div i{
+    color: white;
+    font-size: 25px;
+    background-color:rgba(128, 128, 128, 0.267);
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.icons-baseboard div a{
+    margin: 0;
+}
+
 
 
 @media (max-width: 1200px) {

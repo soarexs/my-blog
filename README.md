@@ -1,4 +1,6 @@
-> <h1>Personal Blog</h1>
+<h1>Personal Blog</h1>
+
+> Hello! This is my blog, I made it using HTML, CSS and JavaScript.
 
 ![Screenshot_5](https://user-images.githubusercontent.com/76456810/158941632-3932ea6c-58ea-4d01-97bf-69e6993892e5.png)
 # 

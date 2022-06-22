@@ -9,17 +9,14 @@
     --white: #ffffff;
     --color-dark: #000000d5;
     --black: #000000;
-    --bg-header: #202020fb;
+    --bg-header: #191928fb;
     --text-header: #ffffff;
     --text-gray: #ffffffc0;
     --color-red: #ab4649;
 }
 
 body {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
-    background-color: #142325;
+    background-color: #272331;
 }
 
 .header {
@@ -40,7 +37,7 @@ body {
 }
 
 .my-profile {
-    position: relative;
+    position: absolute;
     display: flex;
     text-align: justify;
     align-items: center;
@@ -90,7 +87,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #1f2129;
-    height: 1000px;
+    height: 100%;
 }
 
 .container-informations {
@@ -137,13 +134,7 @@ body {
 }
 
 h2.name-title {
-    margin-left: 40px;
     cursor: pointer;
-}
-
-.container-my-name {
-    margin: 0 0 100px 200px;
-    position: absolute;
 }
 
 .myName {
@@ -154,7 +145,6 @@ h2.name-title {
 
 .surname {
     margin: 5px 60px;
-    position: absolute;
     font-size: 36px
 }
 
@@ -171,6 +161,7 @@ h2.name-title {
     height: 70px;
     box-shadow: 0px 0.2px 5px var(--black);
     width: 100%;
+    background-color: var(--bg-header);
 }
 
 .btn-header {
@@ -212,6 +203,7 @@ h2.name-title {
     display: flex;
     font-family: arial;
     color: var(--text-header);
+    margin-left: 20px;
 }
 
 .about-me .img-avatar {
@@ -222,16 +214,53 @@ h2.name-title {
 
 .about-me .container-avatar {
     height: 340px;
+    width: 340px;
 }
 
 .home-page {
     height: 100vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 25%, rgb(0,0,0,0.7) 50%, rgb(0,0,0,0.8) 75%, rgb(0,0,0,0.9) 100% ), url("/images/ceu-estrelado-bottom.jpg");
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 25%, rgb(0, 0, 0, 0.7) 50%, rgb(0, 0, 0, 0.8) 75%, rgb(0, 0, 0, 0.9) 100%), url("/images/ceu-estrelado-bottom.jpg"); */
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+}
+
+.bubbles span {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #ff7272;
+    margin: 0 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #343849cb, 0 0 50px #28abbd, 0 0 100px #28abbd;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(120s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background-color: #ff00b3;
+    box-shadow: 0 0 0 10px #343849cb, 0 0 50px #dd16a1e0, 0 0 100px #dd16a1ca;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(1);
+
+    }
 }
 
 .div-container {
@@ -272,7 +301,8 @@ h2.name-title {
     font-weight: 100;
 }
 
-.comment-posted h4, h5 {
+.comment-posted h4,
+h5 {
     font-size: 15px;
     color: rgba(255, 255, 255, 0.76);
     padding: 20px;
@@ -373,15 +403,19 @@ h2.name-title {
 @keyframes blinkCursor {
     from {
         border-right-color: white;
-    }to {
+    }
+
+    to {
         border-right-color: transparent;
     }
 }
 
-@keyframes typing{
+@keyframes typing {
     from {
         width: 0;
-    }to {
+    }
+
+    to {
         width: 10em;
     }
 }
@@ -394,12 +428,13 @@ h2.name-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 140px;
-    width: 600px;
+    height: 80px;
+    width: 400px;
     border: 2px solid var(--color-red);
     border-radius: 4px;
     margin: 18px 0;
 }
+
 .summary_about_me p {
     font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -423,13 +458,40 @@ h2.name-title {
     border: none;
 }
 
+.btn-download-cv {
+    border-radius: 20px;
+    padding: 10px;
+    width: 140px;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn-download-cv:hover {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.btn-download-cv:active {
+    background-color: #a3a3a3;
+    transition: 0.1s;
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+
 
 .informations_standard {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
 }
 
-.informations_standard span, a {
+.informations_standard span,
+a {
     color: var(--text-gray);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 32px;
@@ -440,12 +502,11 @@ h2.name-title {
     height: 500px;
     width: 500px;
     position: relative;
-    top: 100px;
-    right: 120px;
+    bottom: -60px;
 }
 
 
-.img-programming img{
+.img-programming img {
     height: 100%;
 }
 
@@ -456,7 +517,7 @@ h2.name-title {
     margin: 0 auto;
 }
 
-.about-programming p{
+.about-programming p {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 22px;
     font-weight: 200;
@@ -464,17 +525,14 @@ h2.name-title {
 }
 
 .skills-container {
-    height: 180vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #343849;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 60px;
     flex-direction: column;
-}
-
-.soft-skills {
-    margin-top: 150px;
 }
 
 
@@ -494,25 +552,36 @@ h2.name-title {
 }
 
 .my_skill {
-    height: 200px;
-    width: 200px;
+    height: 140px;
+    width: 140px;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin: 0 20px;
+
 }
 
-.my_skill img{
+.my_skill img {
     height: 80%;
 }
 
+.i[data-src] {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.i[src] {
+    opacity: 1;
+    transform: scale(1);
+    transition: 1s ease-in-out;
+}
+
 .div-skill {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 300px repeat(3, 1fr);
+    gap: 80px 0;
 }
 
 .container_my_skills {
@@ -525,7 +594,6 @@ h2.name-title {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
-    margin: 10px;
     white-space: nowrap;
 }
 
@@ -534,67 +602,8 @@ h2.name-title {
     width: 100%;
     background: #1c1f27;
     display: flex;
-    align-items: center
-    ;
-}
-
-.container-carousel {
-    margin: 0 auto;
-}
-
-.carousel-section hr{
-  border: 0;
-  background-color: gold;
-  height: 2px;
-  width: 160px;
-  margin: 10px 0;
-}
-
-.carousel-section span{
-    color: gold;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-}  
-
-.my_soft_skills {
-    border-radius: 100%;
-    margin: 36px;
-}
-
-.carousel-section {
-    background-color: #313541;
-    display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 120vh;
-    padding: 20px;
-}
-
-.slide {
-    height: 540px;
-    width: 1000px;
-    border-radius: 6px;
-    display: flex;
-    overflow: hidden;
-    box-shadow: #00000085 2px 2px 8px 2px;
-}
-
-.img_slide {
-    object-fit: cover;
-}
-
-.container-img-slide {
-    display: flex;
-    transition: transform 2s ease-in-out;
-    transform: translateX(0);
-}
-
-.icons-baseboard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
 }
 
 .icons-baseboard {
@@ -602,6 +611,27 @@ h2.name-title {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.icons-baseboard div {
+    display: flex;
+    gap: 10px;
+}
+
+
+.icons-baseboard div a {
+    background-color: var(--white);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons-baseboard div a svg {
+    height: 26px;
+    width: 26px;
 }
 
 .icons-baseboard span {
@@ -613,24 +643,27 @@ h2.name-title {
     letter-spacing: 1px;
 }
 
-.icons-baseboard div i{
+.icons-baseboard div i {
     color: white;
     font-size: 25px;
-    background-color:rgba(128, 128, 128, 0.267);
+    background-color: rgba(128, 128, 128, 0.267);
     border-radius: 50%;
     padding: 15px;
     cursor: pointer;
 }
 
-.icons-baseboard div a{
+.icons-baseboard div a {
     margin: 0;
 }
-
-
 
 @media (max-width: 1200px) {
     :root {
         --bg-header2: #202020fb;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 40px 0;
     }
 
     #btn-menu {
@@ -650,21 +683,20 @@ h2.name-title {
     #menu {
         display: none;
         position: absolute;
-        top: 70px;
         right: 0;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: 100vh;
         background-color: var(--bg-header);
     }
 
     #menu li {
         margin-left: 24px;
         padding: 20px;
+        transition: 0.5s;
     }
 
     #menu li:hover {
         margin-left: 32px;
-        transition: 0.5s;
     }
 
     #nav.active #menu {
@@ -688,7 +720,7 @@ h2.name-title {
     }
 
     .informations {
-       display: flex;
+        display: flex;
     }
 
     .about-me {
@@ -702,8 +734,8 @@ h2.name-title {
     .div-skill {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        margin: 20px auto;
+        justify-content: center;
+        justify-items: center;
     }
 
     .container_my_skills {
@@ -711,23 +743,16 @@ h2.name-title {
         margin: 0 auto;
     }
 
-    .slide {
-        width: 100%;
-    }
-
-    .my-profile {
-        top: 50px;
-    }
-
     .container-informations {
         flex-direction: column;
     }
 
     .about-container {
-        min-height: 190vh;
+        min-height: 100%;
     }
 
-    .carousel-section {
-        display: none;
+    .skills-container {
+        min-height: 100%;
+        padding: 100px;
     }
 }

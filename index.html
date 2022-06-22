@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <title>Blog</title>
+</head>
+
+<body>
+    <!-- header do site -->
+    <header class="header">
+        <div class="container-title">
+            <h2 class="name-title" onClick="scrollText()">Andrey <span class="name-title"
+                    style="color: aqua;">Soares</span></h2>
+        </div>
+        <nav id="nav">
+            <button type="button" id="btn-menu">Menu</button>
+            <ul id="menu">
+                <li><a class="btn-header" href="#home">Home</a></li>
+                <li><a class="btn-header" href="#about-me">Sobre mim</a></li>
+                <li><a class="btn-header" href="#skills">Skills</a></li>
+                <li><a class="btn-contact" href="#contact">Contate-me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Página inicial -->
+    <section class="home-page" id="home">
+        <div class="bubbles">
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:14"></span>
+            <span style="--i:18"></span>
+            <span style="--i:12"></span>
+            <span style="--i:21"></span>
+            <span style="--i:22"></span>
+            <span style="--i:10"></span>
+            <span style="--i:18"></span>
+            <span style="--i:13"></span>
+            <span style="--i:20"></span>
+            <span style="--i:14"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:16"></span>
+            <span style="--i:10"></span>
+            <span style="--i:22"></span>
+            <span style="--i:12"></span>
+            <span style="--i:19"></span>
+            <span style="--i:10"></span>
+            <span style="--i:18"></span>
+            <span style="--i:18"></span>
+
+        </div>
+        <div class="my-profile">
+            <div class="profile">
+                <img class="img-profile"
+                    src="https://media-exp1.licdn.com/dms/image/C4D03AQGSabv_BLEJdg/profile-displayphoto-shrink_800_800/0/1634677932184?e=1661385600&v=beta&t=YuJypZM4-A5VsDb91TFfaj64LBNbbQHXorrssdDameY"
+                    alt="">
+            </div>
+
+            <div class="container-name">
+                <h1 class="my-name">
+                    Andrey Soares
+                </h1>
+                <p class="profession">Desenvolvedor &nbsp;Web</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section sobre mim -->
+    <section id="about-me" class="about-container">
+        <div class="about-me">
+            <div class="container-informations">
+                <div class="container-avatar">
+                    <img class="img-avatar i" data-src="/public/profile12.jpg" alt="">
+                </div>
+                <div class="summary_about_me">
+                    <h1>Sobre mim</h1>
+                    <hr class="hr">
+                    <p>
+                        Olá! Tudo bem? Eu me chamo Andrey Soares e sou um desenvolvedor web, programo aplicações backend
+                        e frontend. As tecnologias que eu utilizo são, HTML, CSS, JavaScript, React, Next, Node.js,
+                        Typescript e mongoDB. Estou sempre buscando aprender, sou curioso e determinado. Sempre
+                        evoluindo.
+                    </p>
+                    <div class="informations">
+                        <div class="information_1 informations_standard">
+                            <span>Nome: Andrey Soares</span>
+                            <span>Linkedin: <a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.linkedin.com/in/andrey-soares-ab5a60204/">Andrey
+                                    Soares</a></span>
+                        </div>
+                        <div class="information_2 informations_standard">
+                            <span>Email: <a href="mailto:andrey.soares4742@gmail.com">Acesse aqui</a></span>
+                            <span>Github: <a href="https://github.com/soarexs" target="_blank"
+                                    rel="noopener noreferrer">soarexs</a></span>
+
+                        </div>
+                    </div>
+                    <a style="text-decoration: none;" href="/public/andrey-soares.pdf" download="andrey-soares.pdf"
+                        type="application/pdf" class="btn-download-cv">DOWNLOAD
+                        CV</a>
+                </div>
+            </div>
+
+            <div class="about-programming">
+                <div class="img-programming">
+                    <img class="i" data-src="/public/computer-programming-image.png" alt="">
+                </div>
+                <p>Atuo também como freelancer, caso tenha interesse em fazer um projeto
+                    comigo terei o prazer de arcar
+                    com a responsabilidade. Sou responsável, determinado, curioso, paciente e atencioso. Que tal um
+                    projeto?</p>
+            </div>
+    </section>
+
+    <!--Minhas skills-->
+    <section id="skills" class="skills-container">
+        <div class="container_my_skills">
+            <span>Skills</span>
+            <hr class="hr_2">
+            <div class="div-skill">
+                <div class="my_skill my_skill_1">
+                    <p class="technologies-name">HTML</p>
+                    <img class="i" data-src="/public/logohtml.webp" alt="">
+                </div>
+                <div class="my_skill my_skill_2">
+                    <p class="technologies-name">CSS</p>
+                    <img class="i" data-src="/public/logocss.webp" alt="">
+                </div>
+                <div class="my_skill my_skill_3">
+                    <p class="technologies-name">JavaScript</p>
+                    <img height="100px" width="100px" style="margin-top: 10px;" class="i" data-src="/public/logojs.png"
+                        alt="">
+                </div>
+                <div class="my_skill my_skill_4">
+                    <p class="technologies-name">React</p>
+                    <img class="i" data-src="/public/logoreact.png" alt="">
+                </div>
+                <div class="my_skill my_skill_5">
+                    <p class="technologies-name">Next.js</p>
+
+                    <img class="i" data-src="/public/logonext.png" alt="">
+                </div>
+                <div class="my_skill my_skill_5">
+                    <p class="technologies-name">Node.js</p>
+
+                    <img class="i" data-src="/public/logonode.png" alt="">
+                </div>
+                <div class="my_skill my_skill_5">
+                    <p class="technologies-name">mongoDB</p>
+
+                    <img class="i" data-src="/public/logomongo.png" alt="">
+                </div>
+                <div class="my_skill my_skill_5">
+                    <p class="technologies-name">Typescript</p>
+
+                    <img class="i" data-src="/public/logots.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé do site -->
+    <section id="contact" class="contact-container">
+        <div class="container-my-name">
+            <h2 class="name-title myName" onClick="scrollText()">Andrey <br><span class="name-title surname"
+                    style="color: aqua;">Soares</span></h2>
+        </div>
+        <div class="icons-baseboard">
+            <div>
+                <a href="https://www.linkedin.com/in/andrey-soares-ab5a60204/" target="blank_">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/soarexs" target="blank_">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100073835434443" target="blank_">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path
+                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                    </svg>
+                </a>
+            </div>
+            <span>email: <a href="mailto:andrey.soares4742@gmail.com">andrey.soares4742@gmail.com</a></span>
+            <span>By Andrey Soares</span>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+
+</html>

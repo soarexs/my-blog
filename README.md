@@ -1,13 +1,21 @@
 <h1>Personal Blog</h1>
 
-> Hello! This is my blog, I made it using HTML, CSS and JavaScript.
+> Hello! This is my blog, I made it using HTML, CSS and JavaScript. <a href='https://soarexs.github.io/my-blog/'>Blog</a>
 
-![Screenshot_5](https://user-images.githubusercontent.com/76456810/158941632-3932ea6c-58ea-4d01-97bf-69e6993892e5.png)
+![Screenshot_35](https://user-images.githubusercontent.com/76456810/175144624-97f34b50-79fb-4240-ba4e-9c61112eb9e5.png)
+
 # 
-![Screenshot_6](https://user-images.githubusercontent.com/76456810/158941922-56a8d842-3fc1-4d0e-b957-ba9f47df4a8a.png)
+![Screenshot_36](https://user-images.githubusercontent.com/76456810/175144925-582792b1-f133-4a01-8b9f-f55840f35cf8.png)
+#
+![Screenshot_37](https://user-images.githubusercontent.com/76456810/175145026-ee269e95-e8fb-42b0-aec3-2224bab9ddd2.png)
+#
+![Screenshot_38](https://user-images.githubusercontent.com/76456810/175145098-04bdef9d-ef5b-4661-9d5e-04327d3d00f6.png)
+#
+![Screenshot_39](https://user-images.githubusercontent.com/76456810/175145162-88b4c40d-c2bb-45e8-b801-02b1d27e5d97.png)
 #
 <div display="flex">
-<img src="https://user-images.githubusercontent.com/76456810/158942139-b8c441d1-ccd1-45b4-92d8-c1b7329cb396.png" width="32%" >
-<img src="https://user-images.githubusercontent.com/76456810/158942325-e668f3a5-a9e8-441a-9b5a-b1bea40fd6d5.png" width="32%">
-<img src="https://user-images.githubusercontent.com/76456810/158942643-cd60d9dc-ce17-4abf-945c-b1b4465f8d79.png" width="32%">
+  
+<img src="https://user-images.githubusercontent.com/76456810/175145253-8220bf1a-bfdb-4df6-b417-d8ed84b1b0a6.png" width="32%" >
+<img src="https://user-images.githubusercontent.com/76456810/175147849-9ffa099a-ab28-483c-8e84-32caeee54560.png" width="32%">
+<img src="https://user-images.githubusercontent.com/76456810/175148995-ccd72f12-eff0-4e0c-9df2-86daad728cc1.png" width="32%">
 </div>
